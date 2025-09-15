@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NDC - Online Clothing Shop</title>
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    /* Navbar */
+    header {
+      background: #111;
+      color: #e1d5d5;
+      padding: 15px 20px;
+      display: flex; justify-content: space-between; align-items: center;
+      position: sticky; top: 0; z-index: 1000;
+    }
+    header h2 { font-size: 22px; }
+    nav a {
+      color: #fff; text-decoration: none; margin: 0 15px;
+      font-weight: 500; transition: color 0.3s ease;
+    }
+    nav a:hover { color: #ffd700; }
+
+    /* Hero Section */
+    .hero {
+  background: url('https://www.shutterstock.com/image-illustration/clothes-on-sand-dune-background-600nw-2490651895.jpg') no-repeat center center/cover;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+    .hero h1 { font-size: 3rem; }
+    .hero p { font-size: 1.2rem; margin: 15px 0; }
+    .btn {
+      padding: 12px 25px; background: #ffd700; color: #000;
+      border-radius: 25px; text-decoration: none; font-weight: bold;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    .btn:hover { background: #ffa500; transform: scale(1.1); }
+
+    /* Products Section */
+    section { padding: 60px 20px; text-align: center; }
+    section h2 { font-size: 2rem; margin-bottom: 30px; }
+
+    .products {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;
+    }
+    .card {
+      background: #c74b4b; border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 250px; overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .card:hover { transform: translateY(-8px); }
+    .card img { width: 100%; height: 280px; object-fit: cover; }
+    .card .info { padding: 15px; }
+    .card h3 { font-size: 1.2rem; margin-bottom: 10px; }
+    .price { color: #f2e6e7; font-weight: bold; margin-bottom: 10px; }
+    .buy-btn {
+      display: inline-block; padding: 8px 15px;
+      background: #111; color: #fff; border-radius: 5px;
+      text-decoration: none; font-size: 14px;
+    }
+    .buy-btn:hover { background: #ffd700; color: #000; }
+
+    /* Categories */
+    .categories {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;
+    }
+    .cat {
+      background: #111; color: #fff; padding: 15px 25px;
+      border-radius: 25px; cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .cat:hover { background: #ffd700; color: #000; }
+
+    /* Contact */
+    form { max-width: 500px; margin: auto; text-align: left; }
+    input, textarea {
+      width: 100%; padding: 10px; margin: 8px 0;
+      border: 1px solid #ccc; border-radius: 5px;
+    }
+    button {
+      display: block; width: 100%; padding: 12px;
+      background: #111; color: #fff; border: none;
+      border-radius: 5px; font-weight: bold;
+      cursor: pointer; transition: background 0.3s ease;
+    }
+    button:hover { background: #ffd700; color: #000; }
+
+    /* Footer */
+    footer {
+      text-align: center; background: #111; color: #fff; padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <h2>NDC</h2>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#products">Shop</a>
+      <a href="#categories">Categories</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero">
+    <h1>New Nisha Disha Collection</h1>
+    <p>Trendy & Stylish Outfits Just For You</p>
+    <a href="#products" class="btn">Shop Now</a>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products">
+    <h2>Featured Products</h2>
+    <div class="products">
+      <div class="card">
+        <img src="https://nobero.com/cdn/shop/files/Untitleddesign_27.png?v=1711978684" alt="T-Shirt">
+        <div class="info">
+          <h3>Casual T-Shirt</h3>
+          <p class="price">₹299</p>
+          <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images-cdn.ubuy.co.in/6536d19eb1aa97624f6a348a-magcomsen-men-39-s-winter-jacket-lined.jpg" alt="Jacket">
+        <div class="info">
+          <h3>Winter Jacket</h3>
+          <p class="price">₹699</p>
+          <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://image.hm.com/assets/hm/b7/e7/b7e7a9d2b93986fe46cb4bf27e2ba3fa90fac25e.jpg?imwidth=2160" alt="jeans">
+        <div class="info">
+          <h3>Summer Dress</h3>
+          <p class="price">₹1,499</p>
+          <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Category Gallery</title>
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      text-align: center; 
+      background: #f4f4f4;
+    }
+    h2 { margin: 20px 0; }
+
+    .categories {
+      display: flex; 
+      justify-content: center; 
+      gap: 20px; 
+      margin-bottom: 30px;
+    }
+    .cat {
+      background: #111; 
+      color: #fff; 
+      padding: 12px 20px;
+      border-radius: 25px; 
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .cat:hover { background: #ffd700; color: #000; }
+
+    .gallery {
+      display: none; /* hidden by default */
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px; 
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .gallery img {
+      width: 100%; 
+      height: 250px; 
+      object-fit: cover;
+      border-radius: 10px; 
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .active { display: grid; }
+  </style>
+</head>
+<body>
+<h2>Shop by Category</h2>
+<div class="categories">
+  <div class="cat" onclick="showGallery('men')">Men</div>
+  <div class="cat" onclick="showGallery('women')">Women</div>
+  <div class="cat" onclick="showGallery('Boys')">Boys</div>
+  <div class="cat" onclick="showGallery('Girls')">Girls</div>
+</div>
+
+<!-- Men Gallery -->
+<div id="men" class="gallery">
+  <div class="item">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRplsVcqsZyQa7s0-2tXhTbN7ef4tAfxQMT-Q&s" alt="Men 1">
+    <button class="buy-btn" onclick="buyNow('Men Shirt 1')">Buy Now</button>
+  </div>
+  <div class="item">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR863Ed1tjo0o82AOXjx7kV8cJoZZpq821IsA&s" alt="Men 2">
+    <button class="buy-btn" onclick="buyNow('Men Shirt 2')">Buy Now</button>
+  </div>
+</div>
+
+<!-- Women Gallery -->
+<div id="women" class="gallery">
+  <div class="item">
+    <img src="https://5.imimg.com/data5/SELLER/Default/2022/1/TA/QK/QG/20841403/new-product-500x500.jpeg" alt="Women 1">
+    <button class="buy-btn" onclick="buyNow('Women Dress 1')">Buy Now</button>
+  </div>
+  <div class="item">
+    <img src="https://images.indianweddingsaree.com/tr:w-555/AlternateView/1830415/A638020410863197889.jpg" alt="Women 2">
+    <button class="buy-btn" onclick="buyNow('Women Dress 2')">Buy Now</button>
+  </div>
+</div>
+
+<!-- Boys Gallery -->
+<div id="Boys" class="gallery">
+  <div class="item">
+    <img src="https://rukminim2.flixcart.com/image/368/490/xif0q/shopsy-kids-apparel-combo/r/q/y/9-10-years-shopssnewjk-j-k-creation-original-imahbnpszzzcuxsp.jpeg?q=90&crop=false" alt="Jacket 1">
+    <button class="buy-btn" onclick="buyNow('Boys Jacket 1')">Buy Now</button>
+  </div>
+  <div class="item">
+    <img src="https://m.media-amazon.com/images/I/6131apr0xxL._UY1000_.jpg" alt="Jacket 2">
+    <button class="buy-btn" onclick="buyNow('Boys Jacket 2')">Buy Now</button>
+  </div>
+</div>
+
+<!-- Girls Gallery -->
+<div id="Girls" class="gallery">
+  <div class="item">
+    <img src="https://images.cbazaar.com/images/beige-chinon-silk-digital-print-zari-embroidered-lehenga-ghsep7050be-pl.jpg" alt="Shoes 1">
+    <button class="buy-btn" onclick="buyNow('Girls Lehenga 1')">Buy Now</button>
+  </div>
+  <div class="item">
+    <img src="https://m.media-amazon.com/images/I/718o9GkPqCL._UY1100_.jpg" alt="Shoes 2">
+    <button class="buy-btn" onclick="buyNow('Girls Lehenga 2')">Buy Now</button>
+  </div>
+</div>
+
+<script>
+  function showGallery(category) {
+    document.querySelectorAll('.gallery').forEach(g => g.classList.remove('active'));
+    document.getElementById(category).classList.add('active');
+  }
+
+  function buyNow(product) {
+    // ⚠️ apna WhatsApp number yaha daalo (91 ke sath)
+    let phoneNumber = "919584951669";  
+    let message = `Hi, I want to buy ${product}`;
+    let url = `https://wa.me/${9584951669}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  }
+</script>
+
+<style>
+  .gallery {
+    display: none;
+    margin-top: 20px;
+  }
+  .gallery.active {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .item {
+    text-align: center;
+  }
+  .item img {
+    width: 200px;
+    border-radius: 10px;
+  }
+  .buy-btn {
+    margin-top: 10px;
+    background: #25D366;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .buy-btn:hover {
+    background: #128C7E;
+  }
+</style>
+
+</body>
+</html>
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 StyleHub - All Rights Reserved</p>
+  </footer>
